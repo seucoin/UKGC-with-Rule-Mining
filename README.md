@@ -3,9 +3,9 @@ Source code for WISA-2024 paper: Uncertain Knowledge Graph Completion with Rule 
 
 Since KGs usually suffer from the problem of incompleteness, methods of rule mining and reasoning for knowledge graph completion are extensively studied due to their excellent interpretability. However, previous methods are all conducted under deterministic scenarios, neglecting the uncertainty of knowledge, making them unable to be directly applied to UKGs. In this paper, we propose a new framework on uncertain knowledge graph completion with rule mining. Our framework contains the following components: 1)**The Rule Mining Model** applies an encoder-decoder network transformer to take rule mining as a sequence-to-sequence task to generate rules. It models the uncertainty in UKGs and infer new triples by differentiable reasoning based on TensorLog with mined rules. 2)**The Confidence Prediction Model** uses a pre-trained language model to predict the triple confidence given the rules mined. 
 
-<div style="text - align:center;">
-<img src="https://github.com/user-attachments/assets/ad7411f9-0f45-48c0-a320-c9b5575637b2" alt="image" width="60%" />
-</div>
+<p align="center">
+<img src="https://github.com/user-attachments/assets/ad7411f9-0f45-48c0-a320-c9b5575637b2" alt="image" width="75%" />
+</p>
 
 ## Requirements
 **Step1** Create a virtual environment using `Anaconda` and enter it.
