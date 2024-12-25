@@ -3,8 +3,11 @@ Source code for WISA-2024 paper: Uncertain Knowledge Graph Completion with Rule 
 
 Since KGs usually suffer from the problem of incompleteness, methods of rule mining and reasoning for knowledge graph completion are extensively studied due to their excellent interpretability. However, previous methods are all conducted under deterministic scenarios, neglecting the uncertainty of knowledge, making them unable to be directly applied to UKGs. In this paper, we propose a new framework on uncertain knowledge graph completion with rule mining. Our framework contains the following components: 1)**The Rule Mining Model** applies an encoder-decoder network transformer to take rule mining as a sequence-to-sequence task to generate rules. It models the uncertainty in UKGs and infer new triples by differentiable reasoning based on TensorLog with mined rules. 2)**The Confidence Prediction Model** uses a pre-trained language model to predict the triple confidence given the rules mined. 
 
-![image](https://github.com/user-attachments/assets/ad7411f9-0f45-48c0-a320-c9b5575637b2)
-## Requirement
+<div style="text - align:center;">
+<img src="https://github.com/user-attachments/assets/ad7411f9-0f45-48c0-a320-c9b5575637b2" alt="image" width="60%" />
+</div>
+
+## Requirements
 **Step1** Create a virtual environment using `Anaconda` and enter it.
 
 **Step2** Installing the following packages in the virtual environment:
@@ -24,19 +27,25 @@ We adopt CN15K and NL27K datasets to evaluate our models, UKRM and BCP.
 | NL27K     | 27,221     | 404        | 149,001  | 12,278 | 14,034 |
 
 ## Files
-`bert-base-uncased` folder contains the BERT model downloaded from hugginface(https://huggingface.co/google-bert/bert-base-uncased) and it will be used in the confidence prediction model.\
-`transformer` folder contains source codes for the rule mining model on uncertain knowledge graph (UKRM).\
-`confidence_prediction.py` is the source code for confidence predcition model (BCP).\
-`DATASET` folder contains datasets we used in our paper.\
-`decode_rules` folder contains input preprocessed for the confidence prediction model. GLM-4 is used in the process so it is a little time-consuming and we offer the data can be used directly.
+- `bert-base-uncased` folder contains the BERT model downloaded from hugginface(https://huggingface.co/google-bert/bert-base-uncased) and it will be used in the confidence prediction model.\
+- `transformer` folder contains source codes for the rule mining model on uncertain knowledge graph (UKRM).\
+- `confidence_prediction.py` is the source code for confidence predcition model (BCP).\
+- `DATASET` folder contains datasets we used in our paper.\
+- `decode_rules` folder contains input preprocessed for the confidence prediction model. GLM-4 is used in the process so it is a little time-consuming and we offer the data can be used directly.
 
 ## Usage
-To train the rule mining model, please run follow instruction:\
-`python translate_train.py`\
-To decode rules from the rule mining model, please run follow instruction:\
-`python translate_decode.py`\
-To run the confidence prediction model, please run follow instruction:\
-`python confidence_predcition.py`
+To train the rule mining model, please run follow instruction:
+```bash
+python translate_train.py
+```
+To decode rules from the rule mining model, please run follow instruction:
+```bash
+python translate_decode.py
+```
+To run the confidence prediction model, please run follow instruction:
+```bash
+python confidence_predcition.py
+```
 
 
 ## Argument Descriptions
