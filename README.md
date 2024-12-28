@@ -27,10 +27,10 @@ We adopt CN15K and NL27K datasets to evaluate our models, UKRM and BCP.
 | NL27K     | 27,221     | 404        | 149,001  | 12,278 | 14,034 |
 
 ## Files
-- `bert-base-uncased` folder contains the BERT model downloaded from hugginface(https://huggingface.co/google-bert/bert-base-uncased) and it will be used in the confidence prediction model.\
-- `transformer` folder contains source codes for the rule mining model on uncertain knowledge graph (UKRM).\
-- `confidence_prediction.py` is the source code for confidence predcition model (BCP).\
-- `DATASET` folder contains datasets we used in our paper.\
+- `bert-base-uncased` folder contains the BERT model downloaded from hugginface(https://huggingface.co/google-bert/bert-base-uncased) and it will be used in the confidence prediction model.
+- `transformer` folder contains source codes for the rule mining model on uncertain knowledge graph (UKRM).
+- `confidence_prediction.py` is the source code for confidence predcition model (BCP).
+- `DATASET` folder contains datasets we used in our paper.
 - `decode_rules` folder contains input preprocessed for the confidence prediction model. GLM-4 is used in the process so it is a little time-consuming and we offer the data can be used directly.
 
 ## Usage
@@ -75,7 +75,7 @@ Configs are set in python files and in case you want to modify them. Normally, o
 
 
 ## Citation
-Please cite our paper if you use SuperRL in your work.
+Please cite our paper if you use UKRM in your work.
 ```
 @inproceedings{chen2024uncertain,
   title={Uncertain Knowledge Graph Completion with Rule Mining},
